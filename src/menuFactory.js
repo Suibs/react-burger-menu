@@ -240,7 +240,7 @@ export default styles => {
           {!this.props.noOverlay && (
             <div
               className={`bm-overlay ${this.props.overlayClassName}`.trim()}
-              onClick={() =>
+              onMouseOver={() =>
                 !this.shouldDisableOverlayClick() && this.toggleMenu()
               }
               style={this.getStyles('overlay')}
