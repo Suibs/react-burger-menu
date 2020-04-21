@@ -167,11 +167,11 @@ describe('menuFactory', () => {
       expect(component.state.isOpen).to.be.false;
     });
 
-    it('closes on overlay click', () => {
+    it('closes on overlay hover', () => {
       component = TestUtils.renderIntoDocument(<Menu />);
       component.setState({ isOpen: true });
       const overlay = TestUtils.findRenderedDOMComponentWithClass(component, 'bm-overlay');
-      TestUtils.Simulate.click(overlay);
+      TestUtils.Simulate.mouseOver(overlay);
       expect(component.state.isOpen).to.be.false;
     });
 
